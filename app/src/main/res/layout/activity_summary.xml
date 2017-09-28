@@ -57,6 +57,7 @@
         android:layout_alignLeft="@+id/taxTextView"
         android:layout_alignStart="@+id/taxTextView"
         android:layout_centerVertical="true"
-        android:textSize="10sp"
-        android:text="@string/start_new_order_button"/>
+        android:onClick="startNewOrder"
+        android:text="@string/start_new_order_button"
+        android:textSize="10sp"/>
 </RelativeLayout>

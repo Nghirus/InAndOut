@@ -40,14 +40,58 @@ public class OrderActivity extends AppCompatActivity {
 
     public void goToTotal(View v)
     {
-        mOrder.setDoubleDoubles(Integer.parseInt(mDoubleDoubleEditText.getText().toString()));
-        mOrder.setCheeseburgers(Integer.parseInt(mCheeseBurgerEditText.getText().toString()));
-        mOrder.setFrenchFries(Integer.parseInt(mFrenchFriesEditText.getText().toString()));
-        mOrder.setShakes(Integer.parseInt(mShakesEditText.getText().toString()));
-        mOrder.setSmallDrinks(Integer.parseInt(mSmallDrinkEditText.getText().toString()));
-        mOrder.setMediumDrinks(Integer.parseInt(mMediumDrinkEditText.getText().toString()));
-        mOrder.setLargeDrinks(Integer.parseInt(mLargeDrinkEditText.getText().toString()));
+        try {
+            mOrder.setDoubleDoubles(Integer.parseInt(mDoubleDoubleEditText.getText().toString()));
+        }
+        catch(NumberFormatException e) {
+            mOrder.setDoubleDoubles(0);
+        }
 
+        try {
+            mOrder.setCheeseburgers(Integer.parseInt(mCheeseBurgerEditText.getText().toString()));
+        }
+        catch(NumberFormatException e) {
+            mOrder.setCheeseburgers(0);
+        }
+
+        try {
+            mOrder.setFrenchFries(Integer.parseInt(mFrenchFriesEditText.getText().toString()));
+        }
+        catch (NumberFormatException e)
+        {
+            mOrder.setFrenchFries(0);
+        }
+
+        try {
+            mOrder.setShakes(Integer.parseInt(mShakesEditText.getText().toString()));
+        }
+        catch (NumberFormatException e) {
+            mOrder.setShakes(0);
+        }
+
+        try {
+            mOrder.setSmallDrinks(Integer.parseInt(mSmallDrinkEditText.getText().toString()));
+        }
+        catch (NumberFormatException e)
+        {
+            mOrder.setSmallDrinks(0);
+        }
+
+        try {
+            mOrder.setMediumDrinks(Integer.parseInt(mMediumDrinkEditText.getText().toString()));
+        }
+        catch (NumberFormatException e)
+        {
+            mOrder.setMediumDrinks(0);
+        }
+
+        try {
+            mOrder.setLargeDrinks(Integer.parseInt(mLargeDrinkEditText.getText().toString()));
+        }
+        catch (NumberFormatException e)
+        {
+            mOrder.setLargeDrinks(0);
+        }
         String total = "Order Total " + currency.format(mOrder.calculateTotal());
         String items = "Items Ordered: " + mOrder.getItemsOrdered();
         String subtotal = "Subtotal: " + currency.format(mOrder.calculateSubtotal());

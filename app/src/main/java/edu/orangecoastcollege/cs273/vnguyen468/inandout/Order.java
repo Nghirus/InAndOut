@@ -14,7 +14,7 @@ public class Order {
     public static final double PRICE_SMALL_DRINKS = 1.45;
     public static final double PRICE_MEDIUM_DRINKS = 1.55;
     public static final double PRICE_LARGE_DRINKS = 1.75;
-    public static final double TAX_RATE = 8.0;
+    public static final double TAX_RATE = 0.08;
 
     private int mDoubleDoubles;
     private int mCheeseburgers;
