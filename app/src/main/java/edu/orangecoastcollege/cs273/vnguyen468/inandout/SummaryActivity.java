@@ -1,13 +1,16 @@
 package edu.orangecoastcollege.cs273.vnguyen468.inandout;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
 
+/**
+ * This is displayed after the user has entered their order. The total, items ordered, subtotal,
+ * and tax will be displayed for the user. Users can then go back and place another order.
+ */
 public class SummaryActivity extends AppCompatActivity {
 
     private TextView mTotalTextView;
@@ -15,6 +18,10 @@ public class SummaryActivity extends AppCompatActivity {
     private TextView mSubtotalTextView;
     private TextView mTaxTextView;
 
+    /**
+     * TThis will be called after the user clicks the button Place Order.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +40,10 @@ public class SummaryActivity extends AppCompatActivity {
         mTaxTextView.setText(intentFromOrder.getStringExtra("tax"));
     }
 
+    /**
+     * This closes the current screen and returns the user to the OrderActivity page.
+     * @param v the current view.
+     */
     public void startNewOrder(View v)
     {
         finish();

@@ -1,15 +1,17 @@
 package edu.orangecoastcollege.cs273.vnguyen468.inandout;
 
 import android.content.Intent;
-import android.icu.util.Currency;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import java.text.NumberFormat;
 
+/**
+ * Order Activity is displayed when the User is entering their In N Out order.
+ * The program will take the user's input and calculate the total price for the order.
+ */
 public class OrderActivity extends AppCompatActivity {
 
     private static final NumberFormat currency = NumberFormat.getCurrencyInstance();
@@ -24,6 +26,10 @@ public class OrderActivity extends AppCompatActivity {
 
     private Order mOrder = new Order();
 
+    /**
+     * This is called when the app is loaded, and open the views to the user.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +44,11 @@ public class OrderActivity extends AppCompatActivity {
         mLargeDrinkEditText = (EditText) findViewById(R.id.largeDrinkEditText);
     }
 
+    /**
+     * Gets all the information from the EditText, and sets all the needed information to calculate
+     * the price. The button will then open the next screen with the needed information.
+     * @param v The current view.
+     */
     public void goToTotal(View v)
     {
         try {

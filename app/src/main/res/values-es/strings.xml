@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">In And Out</string>
+    <string name="cheeseburger_text">Hamburguesa con queso $2.15</string>
+    <string name="fountain_drinks_text">Bebidas de la fuente (tamaño de la selección)</string>
+    <string name="french_fries_text">Papas fritas $ 2.20</string>
+    <string name="items_ordered_text">Artículos ordenados:</string>
+    <string name="large_drink_text">Grande $ 1.75</string>
+    <string name="medium_drink_text">Medio $ 1.55</string>
+    <string name="order_total_text">Total del pedido</string>
+    <string name="place_an_order_text">Haga una orden</string>
+    <string name="place_order_button_text">Realizar pedido</string>
+    <string name="shakes_text">Batidos $ 1.45</string>
+    <string name="small_drink_text">Pequeño $ 1.45</string>
+    <string name="start_new_order_button">COMIENZA UNA NUEVA ORDEN</string>
+    <string name="subtotal_text">Total parcial:</string>
+    <string name="tax_text">Impuestos (8%)</string>
+</resources>
